@@ -7,7 +7,7 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 
-
+const port = process.env.PORT || 3000
 // defining paths for express config
 
 const viewsPath = path.join(__dirname, '../templates/views' );  
@@ -123,6 +123,6 @@ app.get('*', (req, res) => {     // to get error message with title and endofpag
 //     res.send('weather page!!');
 // })
 
-app.listen(3000, () => {
-    console.log('server is listening to port 3000.')  // to run in localhost with port number 3000.
+app.listen(port, () => {
+    console.log('server is listening to port:'+ port);  // to run in localhost with port number 3000.
 })
