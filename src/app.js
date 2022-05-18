@@ -21,8 +21,8 @@ hbs.registerPartials(partialsPath);
 
 app.get('', (req, res) => {
     res.render('index', {                 // dynamic data to using handlebars(hbs)
-        title: 'Weather.',
-        name: 'Use this app to know the forecast of the place!',
+        title: 'Home page!',
+        name: 'Use this app to know the latitude and longitude of the place!',
         endofpage: 'Hope you are enjoying the climate :)'
     })
 })
@@ -30,15 +30,14 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {                 // dynamic data to using handlebars(hbs)  // index is views name without extension(hbs)
         title: 'About us!',
-        text: 'More content about weather is described in the book.',
-        endofpage: 'Read the book, You will fall in love with nature.'
+        text: 'This website is created by Shirisha Madas to know the weather conditions, latitude and longitude of the place.',
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {                 // dynamic data to using handlebars(hbs)  // index is views name without extension(hbs)
         title: 'Need Help?',
-        message: 'Go to Weather page then search for a place, you will know the exact forecast to plan for a trip ;)',
+        message: 'Go to Home page then search for a place, you will know the exact latitude and longitude;)',
         endofpage: 'I guess, this will helped you out :)'
     })
 })
